@@ -1,0 +1,19 @@
+{
+  "name": "hello-prometheus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Yuji Suzuki <y0suzuki0123@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "node -r esbuild-register src/hello.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.16",
+    "esbuild": "^0.15.7",
+    "esbuild-register": "^3.3.3",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "prom-client": "^14.1.0"
+  }
+}

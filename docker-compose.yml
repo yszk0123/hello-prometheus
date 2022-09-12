@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  hello-prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    container_name: hello-prometheus
+    ports:
+      - '9090:9090'
+
+  hello-pushgateway:
+    image: prom/pushgateway
+    ports:
+      - '9091:9091'
+    container_name: hello-pushgateway
+    links:
+      - hello-prometheus
